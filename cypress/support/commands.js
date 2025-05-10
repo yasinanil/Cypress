@@ -25,3 +25,12 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 /// <reference types="cypress" />
 import 'cypress-xpath';
+
+Cypress.Commands.add('login', (username, password) => {
+
+    cy.visit("https://thinking-tester-contact-list.herokuapp.com/");
+    cy.get("#email").type(username);
+    cy.get("#password").type(password);
+    cy.get("#submit").click();
+
+});
