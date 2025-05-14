@@ -34,3 +34,8 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get("#submit").click();
 
 });
+
+
+Cypress.Commands.add("getIframe", (locator) => {
+    return cy.get(locator).its("0.contentDocument.body").should("be.visible").then(cy.wrap)
+})
