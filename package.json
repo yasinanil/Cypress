@@ -9,8 +9,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.0",
     "cypress": "^14.3.3",
     "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.14.0",
     "cypress-xpath": "^2.0.1"
   }
 }
