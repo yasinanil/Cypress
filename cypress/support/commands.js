@@ -39,3 +39,22 @@ Cypress.Commands.add('login', (username, password) => {
 Cypress.Commands.add("getIframe", (locator) => {
     return cy.get(locator).its("0.contentDocument.body").should("be.visible").then(cy.wrap)
 })
+
+Cypress.Commands.add("clickLink", (visibleText) => {
+    cy.get("a").contains(visibleText).click()
+})
+
+Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
+
+    Cypress.log({ message: "Test started. You go to " + url })
+
+    return originalFn(url, options)
+})
+
+
+Cypress.Commands.add("signin", () => {
+    cy.visit("https://yasinanil.github.io/signIn.html");
+    cy.get("#username").type("admin");
+    cy.get("[placeholder='Password']").type("123");
+    cy.get("input[type='submit']").click();
+})
