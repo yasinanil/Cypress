@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Alice Brown",
+        "age": 28,
+        "country": "USA"
+    },
+    {
+        "name": "Bob Green",
+        "age": 45,
+        "country": "UK"
+    },
+    {
+        "name": "Carol White",
+        "age": 36,
+        "country": "Australia"
+    },
+    {
+        "name": "Zoey Black",
+        "age": 45,
+        "country": "Germany"
+    },
+    {
+        "name": "David Klein",
+        "age": 60,
+        "country": "Australia"
+    }
+]
