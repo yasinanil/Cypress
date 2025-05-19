@@ -4,6 +4,8 @@ describe("Navigations", () => {
 
         cy.visit("https://yasinanil.github.io/");
         cy.title().should("eq", "QA Testing Portal");
+        //cy.screenshot("Homepage");
+        //cy.get(".card:nth-child(10)").screenshot("Drag and Drop");
 
         cy.clickLink("Actions");
         cy.title().should("eq", "Actions Class Example");
@@ -28,17 +30,8 @@ describe("Navigations", () => {
 
         //Go forward
         cy.go(1);
-        cy.title().should("eq", "Actions Class Example");
-
-
-
-
-
-
+        cy.title().should("eq", "Actions Class ExampleX");
 
     })
-
-
-
 
 })
