@@ -44,13 +44,14 @@ Cypress.Commands.add("clickLink", (visibleText) => {
     cy.get("a").contains(visibleText).click()
 })
 
+/*
 Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
 
     Cypress.log({ message: "Test started. You go to " + url })
 
     return originalFn(url, options)
 })
-
+*/
 
 Cypress.Commands.add("signin", () => {
     cy.visit("https://yasinanil.github.io/signIn.html");
