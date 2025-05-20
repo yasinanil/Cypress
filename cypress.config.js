@@ -1,8 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'e82ox6',
   reporter: 'cypress-mochawesome-reporter',
-  video: false,
+  video: true,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -16,3 +17,5 @@ module.exports = defineConfig({
     },
   },
 });
+
+//npx cypress run --record --key b4b05f1e-9209-49d0-9f9b-4f1b0e257a48
