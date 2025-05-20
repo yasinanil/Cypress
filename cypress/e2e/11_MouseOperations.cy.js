@@ -5,6 +5,10 @@ import '@4tw/cypress-drag-drop'
 describe("Mouse Operations", () => {
 
 
+    beforeEach("Visit App", () => {
+        cy.visit("https://yasinanil.github.io/actionsClickDrag.html");
+    });
+
 
     it("Hover", () => {
 
