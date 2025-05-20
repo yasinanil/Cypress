@@ -3,47 +3,52 @@ class AddRecordPage {
     constructor() {
         this.nameInput = "#nameInput";
         this.ageInput = "#ageInput";
-        this.countryInput = "#countrySelect";
+        this.countrySelect = "#countrySelect";
         this.addButton = "[onclick='addRecord()']";
-        this.tableBody = "//table/tbody"
+        this.tableBody = "//table/tbody";
     }
 
     visit() {
-        cy.visit("https://yasinanil.github.io/addRecordWebTable");
+        cy.visit("https://yasinanil.github.io/addRecordWebTable.html");
+        return this;
     }
 
     enterName(name) {
         cy.get(this.nameInput).type(name);
+        return this;
     }
 
     enterAge(age) {
         cy.get(this.ageInput).type(age);
+        return this;
     }
-
     selectCountry(country) {
-        cy.get(this.countryInput).select(country);
+        cy.get(this.countrySelect).select(country);
+        return this;
     }
 
-    clickAdd() {
+    clickAddButton() {
         cy.get(this.addButton).click();
+        return this;
     }
 
     assertName(name) {
-        cy.xpath(this.tableBody).should("contain.text", name)
+        cy.xpath(this.tableBody).should("contain", name)
+        return this;
     }
 
     assertAge(age) {
-        cy.xpath(this.tableBody).should("contain.text", age)
+        cy.xpath(this.tableBody).should("contain", age)
+        return this;
     }
 
-    assetCountry(country) {
-        cy.xpath(this.tableBody).should("contain.text", country)
+    assertCountry(country) {
+        cy.xpath(this.tableBody).should("contain", country)
+        return this;
     }
 
     assertInputs(name, age, country) {
-        this.assertName(name);
-        this.assertAge(age);
-        this.assetCountry(country);
+        this.assertName(name).assertAge(age).assertCountry(country);
     }
 
 }
