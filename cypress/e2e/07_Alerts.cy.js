@@ -64,12 +64,9 @@ describe("Alerts", () => {
         cy.xpath("//p").should("contain.text", "Congratulations");
     })
 
-    it("Basic Authentication Second", () => {
+    it.only("Basic Authentication Second", () => {
 
-        cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth",
-            {
-                auth: { username: "admin", password: "admin" }
-            });
+        cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 
         cy.xpath("//p").should("contain.text", "Congratulations");
     })
