@@ -9,6 +9,6 @@ describe('testsuit', function(){
 
     it('test2', ()=>{
         cy.visit("https://opensource-demo.orangehrmlive.com/");
-        cy.title().should("eq","OrangeHRMXYZ");
+        cy.title().should("eq","OrangeHRM");
     })
 });

@@ -30,7 +30,7 @@ describe("Navigations", () => {
 
         //Go forward
         cy.go(1);
-        cy.title().should("eq", "Actions Class ExampleX");
+        cy.title().should("eq", "Actions Class Example");
 
     })
 
